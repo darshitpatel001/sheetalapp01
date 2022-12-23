@@ -10,6 +10,16 @@ import Login from "./Login/Login";
 import RequireAuth from "./Login/Private/RequireAuth";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Product from "./Login/Product";
+import css from "./Route/Css"
+import css1 from "./Route/Css1"
+import css2 from "./Route/Css2"
+import Headersw3 from "./Route/Headersw3"
+import Html from "./Route/Html"
+import Html1 from "./Route/Html1"
+import Html2 from "./Route/Html2"
+import Javascript from "./Route/Javascript"
+import Js1 from "./Route/Js1"
+import Js2 from "./Route/Js2"
 
 function App() {
   const [Lan, setLan] = useState("en");
