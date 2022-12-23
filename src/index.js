@@ -123,8 +123,8 @@ root.render(
     {/* <CounterUsE /> */}
 
     {/* <Myreducer/> */}
-    {/* <App/> */}
-    <File />
+    <App/>
+    {/* <File /> */}
   </React.StrictMode>
 );
 

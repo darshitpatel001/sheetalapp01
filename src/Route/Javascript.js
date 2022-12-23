@@ -5,7 +5,7 @@ const Javascript = () => {
     return (
         <div>
 
-            <h1 className="text-center">JavaScript</h1><hr />
+            <h1 className="text-center bg-dark">JavaScript</h1><hr />
             <Outlet />
         </div>
     );
