@@ -59,7 +59,7 @@ export default function () {
         </Form>
        
       </Formik>
-      {/* <button class="form-control btn btn-outline-primary" onClick={displayData} type="button">Display</button> */}
+      <button class="form-control btn btn-outline-primary" onClick={displayData} type="button">Display</button>
     </div>
   );
 }
