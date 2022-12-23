@@ -35,6 +35,7 @@ function App() {
         <Route path="/productlist" element={<RequireAuth><Product /></RequireAuth>} />
       </Routes>
     </BrowserRouter>
+    
     </div>
   );
 }
