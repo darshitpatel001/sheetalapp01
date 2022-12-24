@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./Axios/Globalaxios";
 // import './index.css';
+// import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Home from "./Home";
@@ -59,6 +60,7 @@ import CounterUsE from "./UseEffect/CounterUsE";
 import Myreducer from "./Reactredux/Myreducer";
 import RequireAuth from "./Login/Private/RequireAuth";
 import File from "./FileUplode/File";
+import Inquiry from "./Inquiry";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -123,7 +125,8 @@ root.render(
     {/* <CounterUsE /> */}
 
     {/* <Myreducer/> */}
-    <App/>
+    {/* <App/> */}
+    <Inquiry />
     {/* <File /> */}
   </React.StrictMode>
 );
