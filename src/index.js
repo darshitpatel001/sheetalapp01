@@ -61,6 +61,8 @@ import Myreducer from "./Reactredux/Myreducer";
 import RequireAuth from "./Login/Private/RequireAuth";
 import File from "./FileUplode/File";
 import Inquiry from "./Inquiry";
+import ErrorBoundry from "./Error/ErrorBoundry";
+import BuggyCounter from "./Error/BuggyCounter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -126,7 +128,11 @@ root.render(
 
     {/* <Myreducer/> */}
     {/* <App/> */}
-    <Inquiry />
+    {/* <Inquiry /> */}
+    {/* --------------------------------error---------------------- */}
+    <ErrorBoundry>
+      <BuggyCounter/>
+    </ErrorBoundry>
     {/* <File /> */}
   </React.StrictMode>
 );
