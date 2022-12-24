@@ -5,10 +5,8 @@ export default class BuggyCounter extends Component {
     super(props);
     this.state = { counter: 0 };
   }
-  handleClick() {
-    this.setState(({ counter }) => ({
-      counter: counter + 1,
-    }));
+  handleClick = () => {
+    this.setState(({ counter : this.state.counter +1}));
   }
   render() {
     if (this.state.counter === 3) {
