@@ -63,6 +63,7 @@ import File from "./FileUplode/File";
 import Inquiry from "./Inquiry";
 import ErrorBoundry from "./Error/ErrorBoundry";
 import BuggyCounter from "./Error/BuggyCounter";
+import MyAlbum from "./CustomHook/MyAlbum";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -134,6 +135,7 @@ root.render(
       <BuggyCounter/>
     </ErrorBoundry>
     {/* <File /> */}
+    <MyAlbum />
   </React.StrictMode>
 );
 
