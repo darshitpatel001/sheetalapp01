@@ -61,9 +61,11 @@ import Myreducer from "./Reactredux/Myreducer";
 import RequireAuth from "./Login/Private/RequireAuth";
 import File from "./FileUplode/File";
 import Inquiry from "./Inquiry";
-import ErrorBoundry from "./Error/ErrorBoundry";
+// import ErrorBoundry from "./Error/ErrorBoundry";
 import BuggyCounter from "./Error/BuggyCounter";
 import MyAlbum from "./CustomHook/MyAlbum";
+import {ErrorBoundary} from 'react-error-boundary'
+import { ErrorFallback } from "./Error/ErrorFallback";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -131,9 +133,9 @@ root.render(
     {/* <App/> */}
     {/* <Inquiry /> */}
     {/* --------------------------------error---------------------- */}
-    <ErrorBoundry>
+    <ErrorBoundary FallbackComponent={ErrorFallback} >
       <BuggyCounter/>
-    </ErrorBoundry>
+    </ErrorBoundary>
     {/* <File /> */}
     <MyAlbum />
   </React.StrictMode>

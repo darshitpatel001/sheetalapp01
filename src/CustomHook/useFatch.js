@@ -1,7 +1,6 @@
-import React, { useEffect ,useEffect } from 'react'
+import React, { useState ,useEffect } from 'react'
 
-
-export default useFatch = (url) => {
+const useFatch = (url) => {
     const [loading,setloading] = useState(true);
     const [data,setData] = useState([]);
 
@@ -20,3 +19,5 @@ export default useFatch = (url) => {
  
     return{loading,data}
 }
+
+export default useFatch;
