@@ -24,16 +24,6 @@ export default function HeadersHoc() {
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-item" to="/about">
-                  About
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link class="nav-item" to="/contact">
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
