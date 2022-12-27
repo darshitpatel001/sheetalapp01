@@ -66,7 +66,10 @@ import BuggyCounter from "./Error/BuggyCounter";
 import MyAlbum from "./CustomHook/MyAlbum";
 import {ErrorBoundary} from 'react-error-boundary'
 import { ErrorFallback } from "./Error/ErrorFallback";
+import HeadersHoc from "./HOC/HeaderHoc";
+import MyHoc from "./HOC/MyHoc";
 
+let HomeHoc = MyHoc(HeadersHoc)
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -127,10 +130,7 @@ root.render(
     
       {/* =======================hoc========================== */}
       <Routes>
-        <Route path="/" element={<Homee />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/" element={<HomeHoc />} />
       </Routes>
     </BrowserRouter>
     {/* ------------------------useE  ROU---------- */}
