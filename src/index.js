@@ -68,9 +68,10 @@ import {ErrorBoundary} from 'react-error-boundary'
 import { ErrorFallback } from "./Error/ErrorFallback";
 import HeadersHoc from "./HOC/HeaderHoc";
 import MyHoc from "./HOC/MyHoc";
+import HomeHoc from "./HOC/HomeHOC";
 
-let HomeHoc = MyHoc(HeadersHoc)
 const root = ReactDOM.createRoot(document.getElementById("root"));
+let HomeHoc1 = MyHoc(HomeHoc)
 root.render(
   <React.StrictMode>
     {/* <Counter />
@@ -100,7 +101,7 @@ root.render(
     {/* .............................class----------------------------------------- */}
     {/* <MyClass /> */}
     {/* <Apipost /> */}
-    <ToastContainer />
+    {/* <ToastContainer /> */}
     {/* <Login /> */}
     {/* <Apipost1 /> */}
     {/* <Apipost2 /> */}
@@ -130,7 +131,7 @@ root.render(
     
       {/* =======================hoc========================== */}
       <Routes>
-        <Route path="/" element={<HomeHoc />} />
+        <Route path="/" element={<HomeHoc1 />} />
       </Routes>
     </BrowserRouter>
     {/* ------------------------useE  ROU---------- */}

@@ -36,7 +36,7 @@ function App() {
         <Route path="/productlist" element={<RequireAuth><Product /></RequireAuth>} />
       </Routes>
     </BrowserRouter> */}
-    <BrowserRouter>
+    {/* <BrowserRouter>
       <Headersw3 />
       <Routes>
         <Route path='/' element={<Homew3 />}>CSS</Route>
@@ -53,7 +53,7 @@ function App() {
           <Route path='js2' element={<Js2 />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
 
     </div>
   );

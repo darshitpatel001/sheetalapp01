@@ -1,12 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import HeadersHoc from './HeaderHoc'
+import HeaderHoc from './HeaderHoc'
 import FooterHoc from './FooterHoc';
+
 
 const MyHoc = (Component) => () => (
     <div>
-      <HeadersHoc />
-      <FooterHoc />
+        <HeaderHoc/>
+      <div >
+        <Component />
+      </div>
+      
+      <FooterHoc/>
     </div>
   );
 
