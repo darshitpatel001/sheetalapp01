@@ -115,7 +115,17 @@ root.render(
     {/* </Provider> */}
     {/* <Audio /> */}
     {/* -----------------------router------------------------- */}
-    {/* <BrowserRouter>
+    <BrowserRouter>
+      {/* <Header />
+      <Routes>
+        <Route path="/" element={<Homee />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer /> */}
+    
+      {/* =======================hoc========================== */}
       <Header />
       <Routes>
         <Route path="/" element={<Homee />} />
@@ -124,7 +134,7 @@ root.render(
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </BrowserRouter> */}
+    </BrowserRouter>
     {/* ------------------------useE  ROU---------- */}
     {/* <UseEfflimtLeval2 /> */}
     {/* <CounterUsE /> */}
@@ -133,11 +143,11 @@ root.render(
     {/* <App/> */}
     {/* <Inquiry /> */}
     {/* --------------------------------error---------------------- */}
-    <ErrorBoundary FallbackComponent={ErrorFallback} >
+    {/* <ErrorBoundary FallbackComponent={ErrorFallback} >
       <BuggyCounter/>
-    </ErrorBoundary>
+    </ErrorBoundary> */}
     {/* <File /> */}
-    <MyAlbum />
+    {/* <MyAlbum /> */}
   </React.StrictMode>
 );
 
