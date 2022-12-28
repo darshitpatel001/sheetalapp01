@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense ,lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./Axios/Globalaxios";
 // import './index.css';
@@ -64,14 +64,15 @@ import Inquiry from "./Inquiry";
 // import ErrorBoundry from "./Error/ErrorBoundry";
 import BuggyCounter from "./Error/BuggyCounter";
 import MyAlbum from "./CustomHook/MyAlbum";
-import {ErrorBoundary} from 'react-error-boundary'
+import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./Error/ErrorFallback";
 import HeadersHoc from "./HOC/HeaderHoc";
 import MyHoc from "./HOC/MyHoc";
 import HomeHoc from "./HOC/HomeHOC";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-let HomeHoc1 = MyHoc(HomeHoc)
+// let HomeHoc1 = MyHoc(HomeHoc)
+const HomeHoc1 = React.lazy(() => {import('./HOC/HomeHOC')});
 root.render(
   <React.StrictMode>
     {/* <Counter />
@@ -128,11 +129,14 @@ root.render(
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer /> */}
-    
+
       {/* =======================hoc========================== */}
+      <Suspense fallback={<h2>Loading...</h2>}>
       <Routes>
-        <Route path="/" element={<HomeHoc1 />} />
+          <Route path="/" element={<HomeHoc1 />} />
+          <Route path="/Loggin" element={<Login />} />    
       </Routes>
+      </Suspense>
     </BrowserRouter>
     {/* ------------------------useE  ROU---------- */}
     {/* <UseEfflimtLeval2 /> */}
