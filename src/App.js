@@ -21,6 +21,8 @@ import Html2 from "./Route/Html2"
 import Javascript from "./Route/Javascript"
 import Js1 from "./Route/Js1"
 import Js2 from "./Route/Js2"
+import { Provider } from "react-redux";
+import Counter from "./Counter";
 
 function App() {
   const [Lan, setLan] = useState("en");
@@ -54,6 +56,9 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter> */}
+    <Provider>
+      <Counter/>
+    </Provider>
 
     </div>
   );

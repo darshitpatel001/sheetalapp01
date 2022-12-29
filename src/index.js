@@ -71,8 +71,8 @@ import MyHoc from "./HOC/MyHoc";
 import HomeHoc from "./HOC/HomeHOC";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// let HomeHoc1 = MyHoc(HomeHoc)
-const HomeHoc1 = React.lazy(() => {import('./HOC/HomeHOC')});
+let HomeHoc1 = MyHoc(HomeHoc)
+const HomeHocLazy = React.lazy(() => import('./HOC/HomeHOC'));
 root.render(
   <React.StrictMode>
     {/* <Counter />
@@ -131,19 +131,20 @@ root.render(
       <Footer /> */}
 
       {/* =======================hoc========================== */}
-      <Suspense fallback={<h2>Loading...</h2>}>
+      {/* <Suspense fallback={<h2>Loading...</h2>}>
+        
       <Routes>
           <Route path="/" element={<HomeHoc1 />} />
           <Route path="/Loggin" element={<Login />} />    
       </Routes>
-      </Suspense>
+      </Suspense> */}
     </BrowserRouter>
     {/* ------------------------useE  ROU---------- */}
     {/* <UseEfflimtLeval2 /> */}
     {/* <CounterUsE /> */}
 
     {/* <Myreducer/> */}
-    {/* <App/> */}
+    <App/>
     {/* <Inquiry /> */}
     {/* --------------------------------error---------------------- */}
     {/* <ErrorBoundary FallbackComponent={ErrorFallback} >
