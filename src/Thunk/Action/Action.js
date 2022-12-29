@@ -1,17 +1,19 @@
 export const Plus = (paylode) => ({
-    type:"PLUS"
+    type:"PLUS",
+    paylode
 })
 
 export const Minus = (paylode) => ({
-    type:"MINUS"
+    type:"MINUS",
+    paylode
 })
 
 export const asncminus = num => {
     return dispatch => {
         setTimeout(() => {
             dispatch({
-                type :"MINUS",
-                paylode
+                type :"Minustunk",
+                paylode: num
             })
         }, 1000);
     }

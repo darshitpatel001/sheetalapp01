@@ -22,7 +22,8 @@ import Javascript from "./Route/Javascript"
 import Js1 from "./Route/Js1"
 import Js2 from "./Route/Js2"
 import { Provider } from "react-redux";
-import Counter from "./Counter";
+import Counter from "./Thunk/Counter";
+import store from "./Thunk/Store/Store";
 
 function App() {
   const [Lan, setLan] = useState("en");
@@ -56,7 +57,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter> */}
-    <Provider>
+    <Provider store={store}>
       <Counter/>
     </Provider>
 

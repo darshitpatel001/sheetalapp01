@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { asncminus, Minus, Plus } from './Action/Action';
 
 export default function Counter() {
-    const data = useSelector(y=y.Counter);
+    const data = useSelector(y => y.Counter);
 
     const myDis = useDispatch();
 
@@ -16,12 +16,13 @@ export default function Counter() {
     }
 
     const decrementCounter  = () =>{
-        myDis(asncminus())
+        myDis(asncminus(4))
     }
   return (
     <div>
-        <button onClick={increment}>+</button>
-        <button onClick={decrement}>-</button>
+        {data}
+        <button onClick={increment}> Plus + </button>
+        <button onClick={decrement}>Mynus - </button>
         <button onClick={decrementCounter}>- Counter</button>
     </div>
   )
