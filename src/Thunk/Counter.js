@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { asncminus, Minus, Plus } from './Action/Action';
 
 export default function Counter() {
-    const data = useSelector(y => y.Counter);
+    const data = useSelector(y => y.counter);
 
     const myDis = useDispatch();
 
