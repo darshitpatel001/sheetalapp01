@@ -5,21 +5,21 @@ export const Plus = (paylode) => ({
 
 export const Minus = (paylode) => ({
   type: "MINUS",
-  paylode,
+  paylode
 });
 
-export const getUserListStarted = () => ({
+export const getUserListStarted = (payload) => ({
     type: 'Started',
-    
+    payload
   })
   
   export const getUserListSuccess = (payload) => ({
-    type: 'GET_USER_SUC',
+    type: 'USER_SUCCESS',
     payload
   })
   
   export const getUserListFailure = (payload) => ({
-    type: 'GET_USER_FAILED',
+    type: 'USER_FAILED',
     payload
   })
 
