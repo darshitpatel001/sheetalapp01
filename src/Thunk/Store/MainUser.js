@@ -19,8 +19,9 @@ export default function MainUser() {
   return (
   <div>
    {
-    data?.map((ele)=>{
+    data?.map((ele,index)=>{
       return(
+        <div key={index}>
         <table>
         <tr>
           <td>{ele.id}</td>
@@ -30,6 +31,7 @@ export default function MainUser() {
           <td>{ele.avatar}</td>
         </tr>
       </table>
+      </div>
       )
     })
    }
