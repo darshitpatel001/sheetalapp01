@@ -4,7 +4,7 @@ import { getUserList } from './Thunk/Action/Action';
 
 export default function MainUser() {
 
-    const data = useSelector(y=>y.user.data.data);
+    const data = useSelector(y=>y.user);
 
     const myDisa = useDispatch();
 

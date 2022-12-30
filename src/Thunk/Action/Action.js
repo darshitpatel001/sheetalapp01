@@ -39,8 +39,8 @@ export const Userasnc =
   async (dispatch) => {
     dispatch(getUserListStarted());
     try {
-      const res = await fetch(`https://reqres.in/api/users?page=${page}`);
-      const data = await res.json();
+      const dataa = await fetch(`https://reqres.in/api/users?page=${page}`);
+      const data = await dataa.json();
       dispatch(getUserListSuccess(data));
     } catch (err) {
       dispatch(getUserListFailure(err.message));
