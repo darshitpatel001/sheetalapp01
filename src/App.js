@@ -59,7 +59,7 @@ function App() {
       </Routes>
     </BrowserRouter> */}
     <Provider store={store}>
-      {/* <Counter/> */}
+      <Counter/>
       <MainUser />
     </Provider>
 
