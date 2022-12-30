@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import {useDispatch,useSelector}  from 'react-redux'
-import { getUserList } from './Thunk/Action/Action';
+import { Userasnc } from '../Action/Action';
+
 
 export default function MainUser() {
 
-    const data = useSelector(y=>y.user);
+    const data = useSelector(y=>y.user.data1.data);
 
     const myDisa = useDispatch();
 
@@ -12,10 +13,26 @@ export default function MainUser() {
 
     useEffect(()=> {
 
-        myDisa(getUserList());
+        myDisa(Userasnc());
     },[])
     
   return (
-  <div>MainUser</div>
+  <div>
+   {
+    data?.map((ele)=>{
+      return(
+        <table>
+        <tr>
+          <td>{ele.id}</td>
+          <td>{ele.email}</td>
+          <td>{ele.first_name}</td>
+          <td>{ele.last_name}</td>
+          <td>{ele.avatar}</td>
+        </tr>
+      </table>
+      )
+    })
+   }
+  </div>
   )
 }
