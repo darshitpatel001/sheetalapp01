@@ -7,6 +7,14 @@ export const Minus = (paylode) => ({
   type: "MINUS",
   paylode
 });
+export const Milt = (paylode) => ({
+  type: "MULTI",
+  paylode
+});
+export const Div = (paylode) => ({
+  type: "DEV",
+  paylode
+});
 
 export const getUserListStarted = (payload) => ({
     type: 'Started',

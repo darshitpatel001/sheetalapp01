@@ -8,6 +8,12 @@ export default (state = 0, { type, paylode }) => {
     case "MINUS":
       return state - 1
 
+      case "MULTI":
+        return state * 2
+
+        case "DEV":
+        return state / 2
+
     case "Minustunk":
       return state - paylode;
     default:
