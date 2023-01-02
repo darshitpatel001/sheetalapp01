@@ -26,6 +26,7 @@ import Counter from "./Thunk/Counter";
 import store from "./Thunk/Store/Store";
 import MainUser from "./Thunk/Store/MainUser";
 import CounterSaga from './Thunk/CounterSaga'
+import MyPost from "./Thunk/MyPost";
 
 function App() {
   const [Lan, setLan] = useState("en");
@@ -62,7 +63,8 @@ function App() {
     <Provider store={store}>
       {/* <Counter/>
       <MainUser /> */}
-      <CounterSaga />
+      {/* <CounterSaga /> */}
+      <MyPost/>
     </Provider>
 
     </div>
