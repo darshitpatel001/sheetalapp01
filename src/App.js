@@ -27,6 +27,9 @@ import store from "./Thunk/Store/Store";
 import MainUser from "./Thunk/Store/MainUser";
 import CounterSaga from './Thunk/CounterSaga'
 import MyPost from "./Thunk/MyPost";
+import Myredux1 from "./Redux/Myredux1";
+import Myredux2 from "./Redux/Myredux2";
+import Myredux3 from "./Redux/Myredux3";
 
 function App() {
   const [Lan, setLan] = useState("en");
@@ -64,7 +67,10 @@ function App() {
       {/* <Counter/>
       <MainUser /> */}
       {/* <CounterSaga /> */}
-      <MyPost/>
+      {/* <MyPost/> */}
+      {/* <Myredux1 /> */}
+      {/* <Myredux2 /> */}
+      <Myredux3 />
     </Provider>
 
     </div>
