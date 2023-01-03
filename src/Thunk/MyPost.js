@@ -16,9 +16,9 @@ export default function MyPost() {
     
   return (
     <div>
-    <table> {mydata?.map((m) => {
+    <table> {mydata?.map((m , index) => {
       return (
-        <tr>
+        <tr key={index}>
           <td>{m.id}</td>
           <td>{m.name}</td>
           <td>{m.tagline}</td>
