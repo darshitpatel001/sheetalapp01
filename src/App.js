@@ -23,7 +23,8 @@ import Js1 from "./Route/Js1"
 import Js2 from "./Route/Js2"
 import { Provider } from "react-redux";
 import Counter from "./Thunk/Counter";
-import store from "./Thunk/Store/Store";
+// import store from "./Thunk/Store/Store";
+import store from './ReduxToolKit/CounterTool'
 import MainUser from "./Thunk/Store/MainUser";
 import CounterSaga from './Thunk/CounterSaga'
 import MyPost from "./Thunk/MyPost";
