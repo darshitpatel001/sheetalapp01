@@ -30,6 +30,7 @@ import MyPost from "./Thunk/MyPost";
 import Myredux1 from "./Redux/Myredux1";
 import Myredux2 from "./Redux/Myredux2";
 import Myredux3 from "./Redux/Myredux3";
+import CounterTool from "./ReduxToolKit/CounterTool";
 
 function App() {
   const [Lan, setLan] = useState("en");
@@ -70,7 +71,8 @@ function App() {
       {/* <MyPost/> */}
       {/* <Myredux1 /> */}
       {/* <Myredux2 /> */}
-      <Myredux3 />
+      {/* <Myredux3 /> */}
+      <CounterTool />
     </Provider>
 
     </div>
