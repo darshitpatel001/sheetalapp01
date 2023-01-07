@@ -22,6 +22,4 @@ export const myCounter = createSlice({
   },
 });
 
-export const { increment, decrement, incrementdecrement } = myCounter.actions;
-
 export default myCounter.reducer;
