@@ -24,7 +24,6 @@ import Js2 from "./Route/Js2"
 import { Provider } from "react-redux";
 import Counter from "./Thunk/Counter";
 // import store from "./Thunk/Store/Store";
-import store from './ReduxToolKit/CounterTool'
 import MainUser from "./Thunk/Store/MainUser";
 import CounterSaga from './Thunk/CounterSaga'
 import MyPost from "./Thunk/MyPost";
@@ -32,7 +31,7 @@ import Myredux1 from "./Redux/Myredux1";
 import Myredux2 from "./Redux/Myredux2";
 import Myredux3 from "./Redux/Myredux3";
 import CounterTool from "./ReduxToolKit/CounterTool";
-
+import { StoreTool } from "./ReduxToolKit/Store/StoreTool";
 function App() {
   const [Lan, setLan] = useState("en");
   return (
@@ -65,7 +64,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter> */}
-    <Provider store={store}>
+    <Provider store={StoreTool}>
       {/* <Counter/>
       <MainUser /> */}
       {/* <CounterSaga /> */}

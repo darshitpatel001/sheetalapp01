@@ -8,20 +8,20 @@ export default function CounterTool() {
     const count = useSelector(y=>y.counter);
     const disp = useDispatch();
 
-    // const [data, setdata] = useState(0);
+    const [data, setdata] = useState(0);
 
-    // const mytext = () => {
-    //   setdata(e.target.value)
-    // }
+    const mytext = (e) => {
+      setdata(e.target.value)
+    }
 
   return (
     <div>
         {count.value}
         <button onClick={() =>{disp(increment())}}>Increment</button>
-        <button onClick={() =>{disp(decrement())}}>Decrement</button>
+        <button onClick={() =>{disp(decrement())}}>Decrement</button><br></br>
         
-        {/* <input type='text' onChange={mytext}/>
-        <button onClick={() =>{disp(incrementdecrement(data))}}></button> */}
+        <input type='text' onChange={mytext}/>
+        <button onClick={() =>{disp(incrementdecrement(data))}}>incrementdecrement</button>
     </div>
   )
 }

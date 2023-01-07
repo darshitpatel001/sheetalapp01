@@ -17,7 +17,7 @@ export const myCounter = createSlice({
       }
     },
     incrementByAmount: (state, action) => {
-      state.value += action.payload;
+      state.value += parseInt(action.payload);
     },
   },
 });
