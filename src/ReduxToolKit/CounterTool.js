@@ -33,6 +33,7 @@ const Posts = () => {
   const { list, status } = useSelector((y) => y.posts);
   const dispatch = useDispatch();
 
+  console.log(list)
   useEffect(() => {
     dispatch(getPosts({ userId: 1 }));
   }, [dispatch]);
