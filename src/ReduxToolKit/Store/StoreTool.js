@@ -8,11 +8,11 @@
 // });
 
 import { configureStore } from '@reduxjs/toolkit';
-import ReducerTool from '../ReducerTool';
+import postsSlice from '../ReducerTool';
 
 export const StoreTool = configureStore({
   reducer: {
-    posts : ReducerTool
+    posts : postsSlice
   },
 });
 
