@@ -44,10 +44,10 @@ const Posts = () => {
   return (
     <div>
     <table>
-      {list.map((ele) => {
+      {list?.map((ele,index) => {
         return (
-          <tr>
-            <td>{ele.date}</td>
+          <tr key={index}>
+            {/* <td>{ele.date}</td> */}
             <td>{ele.localName}</td>
             <td>{ele.name}</td>
             <td>{ele.countryCode}</td>

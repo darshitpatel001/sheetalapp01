@@ -33,7 +33,7 @@ export const getPosts = createAsyncThunk(
   'posts/getPosts',
   async (argument, { dispatch, getState }) => {
   
-    return fetch(`https://date.nager.at/api/v2/publicholidays/2020/US=${argument.localName}`).then(y => y.json());
+    return fetch(`https://date.nager.at/api/v2/publicholidays/2020/US`).then(y => y.json());
   }
 );
 
