@@ -43,7 +43,7 @@ import ReactMemo from "./ReactMemo";
 import MyReadMore from "./MyReadMore";
 import Counterr from "./Counterr";
 import store from "./Reactredux/Store/Store";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from "react-redux";
 import UiForm from "./Material Ui/UiForm";
 import Audio from "./Audio/Audio";
@@ -69,6 +69,7 @@ import { ErrorFallback } from "./Error/ErrorFallback";
 import HeadersHoc from "./HOC/HeaderHoc";
 import MyHoc from "./HOC/MyHoc";
 import HomeHoc from "./HOC/HomeHOC";
+import Tast1 from "./Boostrap/Tast1";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -144,7 +145,7 @@ root.render(
     {/* <CounterUsE /> */}
 
     {/* <Myreducer/> */}
-    <App/>
+    {/* <App/> */}
     {/* <Inquiry /> */}
     {/* --------------------------------error---------------------- */}
     {/* <ErrorBoundary FallbackComponent={ErrorFallback} >
@@ -152,6 +153,8 @@ root.render(
     </ErrorBoundary> */}
     {/* <File /> */}
     {/* <MyAlbum /> */}
+
+    <Tast1 />
   </React.StrictMode>
 );
 
