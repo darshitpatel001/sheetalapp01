@@ -146,7 +146,7 @@ root.render(
     {/* <CounterUsE /> */}
 
     {/* <Myreducer/> */}
-    {/* <App/> */}
+    <App/>
     {/* <Inquiry /> */}
     {/* --------------------------------error---------------------- */}
     {/* <ErrorBoundary FallbackComponent={ErrorFallback} >
@@ -155,8 +155,8 @@ root.render(
     {/* <File /> */}
     {/* <MyAlbum /> */}
 
-    <Tast1 />
-    <Task2 />
+    {/* <Tast1 /> */}
+    {/* <Task2 /> */}
   </React.StrictMode>
 );
 
