@@ -70,6 +70,7 @@ import HeadersHoc from "./HOC/HeaderHoc";
 import MyHoc from "./HOC/MyHoc";
 import HomeHoc from "./HOC/HomeHOC";
 import Tast1 from "./Boostrap/Tast1";
+import Task2 from "./Boostrap/Task2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -155,6 +156,7 @@ root.render(
     {/* <MyAlbum /> */}
 
     <Tast1 />
+    <Task2 />
   </React.StrictMode>
 );
 
