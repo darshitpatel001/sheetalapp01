@@ -64,16 +64,19 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter> */}
-    <Provider store={StoreTool}>
-      {/* <Counter/>
-      <MainUser /> */}
-      {/* <CounterSaga /> */}
-      {/* <MyPost/> */}
-      {/* <Myredux1 /> */}
-      {/* <Myredux2 /> */}
-      {/* <Myredux3 /> */}
-      <CounterTool />
-    </Provider>
+    // <Provider store={StoreTool}>
+    //   {/* <Counter/>
+    //   <MainUser /> */}
+    //   {/* <CounterSaga /> */}
+    //   {/* <MyPost/> */}
+    //   {/* <Myredux1 /> */}
+    //   {/* <Myredux2 /> */}
+    //   {/* <Myredux3 /> */}
+    //   <CounterTool />
+    // </Provider>
+<Provider store={StoreProduct}>
+
+</Provider>
 
     </div>
   );
