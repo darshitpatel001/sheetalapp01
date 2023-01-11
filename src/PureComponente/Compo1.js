@@ -16,7 +16,7 @@ export default class Compo1 extends Component {
     e.preventDefault();
     let d = [this.state.array];
     d.push(this.state.input)
-    console.log(d)
+    this.setState({...this.state ,"array":d})
   };
   render() {
     return (
@@ -25,6 +25,7 @@ export default class Compo1 extends Component {
         <button type="button" onClick={this.DataSubmit}>
           Add
         </button>
+        {this.state.array}
         <Compo2 />
       </div>
     );
