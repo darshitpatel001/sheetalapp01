@@ -71,6 +71,7 @@ import MyHoc from "./HOC/MyHoc";
 import HomeHoc from "./HOC/HomeHOC";
 import Tast1 from "./Boostrap/Tast1";
 import Task2 from "./Boostrap/Task2";
+import Compo1 from "./PureComponente/Compo1";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -157,6 +158,7 @@ root.render(
 
     {/* <Tast1 /> */}
     {/* <Task2 /> */}
+    <Compo1 />
   </React.StrictMode>
 );
 

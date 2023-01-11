@@ -1,12 +1,32 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import Compo2 from "./Compo2";
 
-export default class Compo1 extends PureComponent {
-  static propTypes = {second: third}
+export default class Compo1 extends Component {
+  constructor() {
+    super();
+    this.state={ array:[] ,input:''};
+  }
 
+  MyHandler = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  };input
+
+  DataSubmit = (e) => {
+    e.preventDefault();
+    let d = [this.state.array];
+    d.push(this.state.input)
+    console.log(d)
+  };
   render() {
     return (
-      <div>Compo1</div>
-    )
+      <div>
+        <input type="text"  onChange={this.MyHandler}/>
+        <button type="button" onClick={this.DataSubmit}>
+          Add
+        </button>
+        <Compo2 />
+      </div>
+    );
   }
 }
