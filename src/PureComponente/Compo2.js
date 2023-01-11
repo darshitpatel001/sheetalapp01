@@ -6,9 +6,7 @@ export default class Compo2 extends PureComponent {
 
   render() {
     return (
-      <div>
-        
-      </div>
+      <div>{alert('This is PureFunction')}</div>
     )
   }
 }
