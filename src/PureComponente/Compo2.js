@@ -5,7 +5,6 @@ export default class Compo2 extends PureComponent {
   static propTypes = {second: third}
 
   render() {
-    alert('This is PureFunction')
     return (
       <div>
         
