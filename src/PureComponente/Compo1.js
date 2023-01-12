@@ -22,7 +22,7 @@ export default class Compo1 extends Component {
   render() {
     return (
       <div>
-        <input type="text" onChange={this.MyHandler} />
+        <input type="text" name="input" onChange={this.MyHandler} />
         <button type="button" onClick={this.DataSubmit}>
           Add
         </button>
