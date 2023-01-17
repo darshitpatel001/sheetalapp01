@@ -22,14 +22,11 @@ export default class Formcom extends Component {
     return (
       <div>
 
-        <form onSubmit={this.mySubmit}>
-
             <input type="text" value={this.state.firstName} name="firstName" onChange={this.Handler} />
             <input type="text" value={this.state.lastName}  name="lastName" onChange={this.Handler}/>
             <input type="submit" value="save" />
 
         </form>
-
       </div>
     )
   }
