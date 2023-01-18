@@ -25,10 +25,10 @@ export default class Formcom extends Component {
       <div>
         <form  class="w-50 mx-auto" onSubmit={this.mySubmit}>
             <label htmlFor="" class="form-label"> First Name : </label>
-            <input value={this.state.lastName}  name="firstName" onChange={this.Handler} />
+            <input value={this.state.lastName}  name="firstName" onChange={this.Handler} /><br/>
             <label htmlFor="" class="form-label"> Last Name : </label>
-            <input type="text" value={this.state.lastName}  name="lastName" onChange={this.Handler}/>
-            <label htmlFor="" class="form-label"> Address : </label>
+            <input type="text" value={this.state.lastName}  name="lastName" onChange={this.Handler}/><br/>
+            <label htmlFor="" class="form-label"> Address :- </label><br/>
             <label htmlFor="" class="form-label"> City : </label>
             <input type="text" value={this.state.city}  name="city" onChange={this.Handler}/>
             {/* <input type="submit" value="save" /> */}

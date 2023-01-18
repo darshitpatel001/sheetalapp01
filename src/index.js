@@ -73,6 +73,8 @@ import Tast1 from "./Boostrap/Tast1";
 import Task2 from "./Boostrap/Task2";
 import Compo1 from "./PureComponente/Compo1";
 import Formcom from "./PureComponente/Formcom";
+import DefaultProps from "./Props/DefaultProps";
+import DynamicForm from "./Props/DynamicForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -160,7 +162,9 @@ root.render(
     {/* <Tast1 /> */}
     {/* <Task2 /> */}
     {/* <Compo1 /> */}
-    <Formcom />
+    {/* <Formcom /> */}
+    {/* <DefaultProps /> */}
+    <DynamicForm />
   </React.StrictMode>
 );
 
