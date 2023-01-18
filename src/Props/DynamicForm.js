@@ -46,7 +46,7 @@ export default function DynamicForm() {
                 onChange={handler}
                 value={val.name}
               /><br/>
-              <label>Education:</label>
+              <label class="form-label">Education:</label>
               <input
                 type="text"
                 class="form-control"
@@ -54,7 +54,7 @@ export default function DynamicForm() {
                 onChange={handler}
                 value={val.educ}
               /><br/>
-              <label>Start Date:</label>
+              <label class="form-label">Start Date:</label>
               <input
                 type="date"
                 class="form-control"
@@ -62,7 +62,7 @@ export default function DynamicForm() {
                 onChange={handler}
                 value={val.startdate}
               /><br/>
-              <label>End Date:</label>
+              <label class="form-label">End Date:</label>
               <input
                 type="date"
                 name="enddate"
@@ -70,7 +70,7 @@ export default function DynamicForm() {
                 onChange={handler}
                 value={val.enddate}
               /><br/>
-              <label>Degree:</label>
+              <label class="form-label">Degree:</label>
               <input
                 type="text"
                 name="degree"
