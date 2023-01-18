@@ -37,9 +37,11 @@ export default function DynamicForm() {
         {data.map((val) => {
           return (
             <>
+            <h1 class='text-center'>Education Form</h1>
               <label class="form-label">Full Name : </label>
               <input
                 type="text"
+                class="form-control"
                 name="name"
                 onChange={handler}
                 value={val.name}
@@ -47,6 +49,7 @@ export default function DynamicForm() {
               <label>Education:</label>
               <input
                 type="text"
+                class="form-control"
                 name="educ"
                 onChange={handler}
                 value={val.educ}
@@ -54,6 +57,7 @@ export default function DynamicForm() {
               <label>Start Date:</label>
               <input
                 type="date"
+                class="form-control"
                 name="startdate"
                 onChange={handler}
                 value={val.startdate}
@@ -62,6 +66,7 @@ export default function DynamicForm() {
               <input
                 type="date"
                 name="enddate"
+                class="form-control"
                 onChange={handler}
                 value={val.enddate}
               /><br/>
@@ -69,6 +74,7 @@ export default function DynamicForm() {
               <input
                 type="text"
                 name="degree"
+                class="form-control"
                 onChange={handler}
                 value={val.degree}
               /><br/>
