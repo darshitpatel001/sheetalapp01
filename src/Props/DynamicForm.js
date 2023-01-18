@@ -33,47 +33,47 @@ export default function DynamicForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} class="w-50 mx-auto">
         {data.map((val) => {
           return (
             <>
-              <label>Full Name:</label>
+              <label class="form-label">Full Name : </label>
               <input
                 type="text"
                 name="name"
                 onChange={handler}
                 value={val.name}
-              />
+              /><br/>
               <label>Education:</label>
               <input
                 type="text"
                 name="educ"
                 onChange={handler}
                 value={val.educ}
-              />
+              /><br/>
               <label>Start Date:</label>
               <input
                 type="date"
                 name="startdate"
                 onChange={handler}
                 value={val.startdate}
-              />
+              /><br/>
               <label>End Date:</label>
               <input
                 type="date"
                 name="enddate"
                 onChange={handler}
                 value={val.enddate}
-              />
+              /><br/>
               <label>Degree:</label>
               <input
                 type="text"
                 name="degree"
                 onChange={handler}
                 value={val.degree}
-              />
-              <input type="submit" value="Save" />
-              <button onClick={Add}>Add...</button>
+              /><br/>
+              <input type="submit" class="form-control btn btn-outline-primary" value="Save" /><br/>
+              <button class="form-control btn btn-outline-primary" onClick={Add}>Add...</button>
             </>
           );
         })}
