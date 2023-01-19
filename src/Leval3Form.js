@@ -14,31 +14,43 @@ export default function Level3Form() {
       edu: "",
       university: "",
       degree: "",
-      sdateedu: "",
-      enddateedu: "",
+      sdatee: "",
+      enddatee: "",
     },
   ]);
   const [dataexper, setdataexper] = useState([
     {
       company: "",
       designation: "",
-      sdateexp: "",
-      enddateexp: "",
+      startdate: "",
+      enddate: "",
       check: "",
     },
   ]);
+const [isDisable, setIsdisable] = useState(false);
+const handleInputChangeexpp = (e, index) => {
 
-  const handleInputChange = (e, index) => {
-    const { name, value } = e.target;
-    const list = [...data];
-    list[index][name] = value;
-    setdata(list);
-  };
+        if (e.target.type == 'checkbox') {
 
-  const DataSubmit = (e) => {
-    e.preventDefault();
-    console.log(data, dataeducation, dataexper);
-  };
+            if (e.target.checked == true) {
+                setIsdisable(true)
+                setdata({ ...dataexper, "enddateexp": "" })
+            } else {
+                setIsdisable(false)
+            }
+
+        } else {
+            const { name, value } = e.target;
+            const list = [...dataexper];
+            list[index][name] = value;
+            setdataexper(list);
+
+        }
+    };
+
+
+
+
 
   const handleRemoveClick = (index) => {
     const list = [...dataeducation];
@@ -64,7 +76,8 @@ export default function Level3Form() {
     setdataeducation(list);
   };
 
-  // ==================================================
+
+
   const AddExperience = () => {
     setdataexper([
       ...dataexper,
@@ -87,6 +100,24 @@ export default function Level3Form() {
     const list = [...dataexper];
     list.splice(index, 1);
     setdataexper(list);
+  };
+
+  const handleInputChange = (e, index) => {
+    setdata({...data,[e.target.name]:e.target.value})
+  };
+
+  const DataSubmit = (e) => {
+    e.preventDefault();
+    console.log(data, dataeducation, dataexper);
+  };
+
+  const handleReset = () => {
+    Array.from(document.querySelectorAll("input")).forEach(
+      (input) => (input.value = "")
+    );
+    this.setState({
+      itemvalues: [{}],
+    });
   };
   return (
     <div>
@@ -136,16 +167,18 @@ export default function Level3Form() {
           <label class="form-label">Country:</label>
           <input
             type="text"
+            class="form-control"
             name="country"
             onChange={(e) => handleInputChange(e)}
           />
           <br />
+        
 
-          {dataeducation.map((value, i) => {
+          {dataeducation.map((value, i , index) => {
             return (
-              <>
-                <h2>Education Details</h2>
-                <label class="form-label">Education Level:</label>
+              <div key={index}>
+                <h2 class='text-center'>Education Details</h2>
+                <label class="form-label">Education Level : </label>
                 <select
                   name="edu"
                   onChange={(e) => handleInputChangeedu(e, i)}
@@ -180,7 +213,7 @@ export default function Level3Form() {
                 <input
                   type="date"
                   class="form-control"
-                  name="sdateedu"
+                  name="sdatee"
                   onChange={(e) => handleInputChangeedu(e, i)}
                   value={value.sdateedu}
                 />
@@ -189,7 +222,7 @@ export default function Level3Form() {
                 <input
                   type="date"
                   class="form-control"
-                  name="enddateedu"
+                  name="enddatee"
                   onChange={(e) => handleInputChangeedu(e, i)}
                   value={value.enddateedu}
                 />
@@ -207,14 +240,15 @@ export default function Level3Form() {
                   {dataeducation.length - 1 === i && (
                     <button class="form-control btn btn-outline-primary"  onClick={handleAddClick}>Add</button>
                   )}
+                </div><br/>
               </div>
             );
           })}
-          <div>{JSON.stringify(dataeducation)}</div>
-          {dataexper.map((value, i) => {
+          {/* <div>{JSON.stringify(dataeducation)}</div> */}
+          {dataexper.map((value, i , index) => {
             return (
-              <>
-                <h2>Experience Details</h2>
+              <div key={index}>
+                <h2 class='text-center'>Experience Details</h2>
                 <label class="form-label">Company Name:</label>
                 <input
                   type="text"
@@ -236,7 +270,7 @@ export default function Level3Form() {
                 <label class="form-label">StartDate:</label>
                 <input
                   type="date"
-                  name="sdateexp"
+                  name="startdate"
                   class="form-control"
                   onChange={(e) => handleInputChangeexp(e, i)}
                   value={value.sdateexp}
@@ -245,8 +279,9 @@ export default function Level3Form() {
                 <label class="form-label">EndDate:</label>
                 <input
                   type="date"
-                  name="enddateexp"
+                  name="enddate"
                   class="form-control"
+                  disabled={isDisable}
                   onChange={(e) => handleInputChangeexp(e, i)}
                   value={value.enddateexp}
                 />
@@ -254,9 +289,7 @@ export default function Level3Form() {
                 <input
                   type="checkbox"
                   name="check"
-                  id=""
-                  class="form-control"
-                  onClick={handleInputChangeexp}
+                  onClick={handleInputChangeexpp}
                   value={value.check}
                 />
                 are you currently working in this company
@@ -271,14 +304,20 @@ export default function Level3Form() {
                     </button>
                   )}
                   {dataexper.length - 1 === i && (
-                    <button onClick={AddExperience}class="form-control btn btn-outline-primary" >Add More...</button>
+                    <button onClick={AddExperience} class="form-control btn btn-outline-primary" >Add...</button>
                   )}
                 </div>
-              </>
+              </div>
             );
           })}
-          <div>{JSON.stringify(dataexper)}</div>
-          <input type="submit" value="Save" />
+          {/* <div>{JSON.stringify(dataexper)}</div> */}
+          {/* <input type="submit" value="Save" class="form-control btn btn-outline-primary"  /> */}
+          <div className="text-center">
+          <input type="submit" value="save" className="btn" />
+          <button onClick={handleReset} className="btn ">
+            Reset
+          </button>
+        </div>
         </form>
       </div>
     </div>
