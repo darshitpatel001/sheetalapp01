@@ -2,7 +2,6 @@ import { React, useState } from "react";
 
 export default function Level3Form() {
   const [data, setdata] = useState({
-    // Basic: {
     fname: "",
     lname: "",
     address: "",
@@ -41,7 +40,6 @@ export default function Level3Form() {
     console.log(data, dataeducation, dataexper);
   };
 
-  // ==================================================
   const handleRemoveClick = (index) => {
     const list = [...dataeducation];
     list.splice(index, 1);
@@ -142,8 +140,6 @@ export default function Level3Form() {
             onChange={(e) => handleInputChange(e)}
           />
           <br />
-          <br />
-          <br />
 
           {dataeducation.map((value, i) => {
             return (
@@ -211,8 +207,7 @@ export default function Level3Form() {
                   {dataeducation.length - 1 === i && (
                     <button class="form-control btn btn-outline-primary"  onClick={handleAddClick}>Add</button>
                   )}
-                </div>
-              </>
+              </div>
             );
           })}
           <div>{JSON.stringify(dataeducation)}</div>
