@@ -76,6 +76,7 @@ import Formcom from "./PureComponente/Formcom";
 import DefaultProps from "./Props/DefaultProps";
 import DynamicForm from "./Props/DynamicForm";
 import Leval3Form from "./Leval3Form";
+import ApiDelete from "./API/ApiDelete";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -151,7 +152,7 @@ root.render(
     {/* <CounterUsE /> */}
 
     {/* <Myreducer/> */}
-    {/* <App/> */}
+    <App/>
     {/* <Inquiry /> */}
     {/* --------------------------------error---------------------- */}
     {/* <ErrorBoundary FallbackComponent={ErrorFallback} >
@@ -166,7 +167,8 @@ root.render(
     {/* <Formcom /> */}
     {/* <DefaultProps /> */}
     {/* <DynamicForm /> */}
-    <Leval3Form />
+    {/* <Leval3Form /> */}
+    <ApiDelete />
   </React.StrictMode>
 );
 

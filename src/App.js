@@ -76,9 +76,10 @@ function App() {
       {/* <Myredux3 /> */}
      {/* <CounterTool /> */}
      {/* </Provider> */}
-      <Provider store={StoreProduct}>
-        <Product />
-      </Provider>
+      // <Provider store={StoreProduct}>
+      //   <Product />
+      // </Provider>
+      <h1>Hello</h1>
     </div>
   );
 }
