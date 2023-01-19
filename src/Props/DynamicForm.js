@@ -70,7 +70,7 @@ export default function DynamicForm() {
                 onChange={handler}
                 value={val.enddate}
               /><br/>
-              <label class="form-label">Degree:</label>
+              <label>Degree:</label>
               <input
                 type="text"
                 name="degree"

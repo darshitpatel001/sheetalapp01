@@ -75,6 +75,7 @@ import Compo1 from "./PureComponente/Compo1";
 import Formcom from "./PureComponente/Formcom";
 import DefaultProps from "./Props/DefaultProps";
 import DynamicForm from "./Props/DynamicForm";
+import Leval3Form from "./Leval3Form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -164,7 +165,8 @@ root.render(
     {/* <Compo1 /> */}
     {/* <Formcom /> */}
     {/* <DefaultProps /> */}
-    <DynamicForm />
+    {/* <DynamicForm /> */}
+    <Leval3Form />
   </React.StrictMode>
 );
 
