@@ -4,6 +4,7 @@ import { useEffect , useState } from 'react'
 
 export default function ApiDelete() {
     const [data, setdata] = useState([]);
+    const [visble,setvisible] = useState(true);
 
     
     useEffect(() => {
@@ -12,6 +13,10 @@ export default function ApiDelete() {
             setdata(y.data)
         })
       }, [data])
+
+      const Deleteele = () => {
+        setvisible((prev) =>!prev)
+      }
   return (
     <div>
         <table> {data.map((ele) => {
@@ -25,6 +30,9 @@ export default function ApiDelete() {
               <td>{ele.counties}</td>
               <td>{ele.launchYear}</td>
               <td>{ele.type}</td> */}
+              {visble &&(
+                <td><button onClick={Deleteele}>Delete</button></td>
+              )}
             </tr>
           );
         })}
