@@ -77,6 +77,7 @@ import DefaultProps from "./Props/DefaultProps";
 import DynamicForm from "./Props/DynamicForm";
 import Leval3Form from "./Leval3Form";
 import ApiDelete from "./API/ApiDelete";
+import Registration from './EMS/Registration'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -110,8 +111,8 @@ root.render(
     {/* .............................class----------------------------------------- */}
     {/* <MyClass /> */}
     {/* <Apipost /> */}
-    {/* <ToastContainer /> */}
-    {/* <Login /> */}
+    <ToastContainer /> 
+    <Login />
     {/* <Apipost1 /> */}
     {/* <Apipost2 /> */}
     {/* <Apipostprect /> */}
@@ -168,7 +169,8 @@ root.render(
     {/* <DefaultProps /> */}
     {/* <DynamicForm /> */}
     {/* <Leval3Form /> */}
-    <ApiDelete />
+    {/* <ApiDelete /> */}
+    {/* <Registration /> */}
   </React.StrictMode>
 );
 
