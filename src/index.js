@@ -77,7 +77,7 @@ import DefaultProps from "./Props/DefaultProps";
 import DynamicForm from "./Props/DynamicForm";
 import Leval3Form from "./Leval3Form";
 import ApiDelete from "./API/ApiDelete";
-import Registration from './EMS/Registration'
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 let HomeHoc1 = MyHoc(HomeHoc)
@@ -112,7 +112,7 @@ root.render(
     {/* <MyClass /> */}
     {/* <Apipost /> */}
     <ToastContainer /> 
-    <Login />
+    {/* <Login /> */}
     {/* <Apipost1 /> */}
     {/* <Apipost2 /> */}
     {/* <Apipostprect /> */}
@@ -130,14 +130,14 @@ root.render(
     {/* <Audio /> */}
     {/* -----------------------router------------------------- */}
     <BrowserRouter>
-      {/* <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Homee />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <Footer /> */}
+      <Footer />
 
       {/* =======================hoc========================== */}
       {/* <Suspense fallback={<h2>Loading...</h2>}>

@@ -71,9 +71,9 @@ function App() {
       <MainUser /> */}
       {/* <CounterSaga /> */}
       {/* <MyPost/> */}
-      {/* <Myredux1 /> */}
-      {/* <Myredux2 /> */}
-      {/* <Myredux3 /> */}
+      {/* <Myredux1 />
+      <Myredux2 />
+      <Myredux3 /> */}
      {/* <CounterTool /> */}
      {/* </Provider> */}
       {/* <Provider store={StoreProduct}>
